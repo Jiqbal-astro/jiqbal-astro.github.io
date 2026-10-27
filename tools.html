@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools | Javed Iqbal</title>
+<meta name="description" content="Browser-based astronomy simulators by Javed Iqbal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+ <div class="nav-wrap">
+  <a class="brand" href="index.html">JAVED IQBAL</a>
+  <nav class="nav" aria-label="Main navigation">
+   <a href="index.html">Home</a>
+   <a href="research.html">Research</a>
+   <a href="full-publications.html">Publications</a>
+   <a class="active" aria-current="page" href="tools.html">Tools</a>
+   <a href="outreach.html">Outreach</a>
+   <a href="index.html#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+<main>
+ <header class="page-head">
+  <h1>Tools</h1>
+  <p>Two browser-based simulators I wrote for teaching and outreach. Both run in any web browser with nothing to install, and I have used them in classes and public talks since 2023.</p>
+ </header>
+
+ <section class="row">
+  <h2>Exoplanet transit simulator</h2>
+  <div class="row-body">
+   <p>Models planetary transits and draws the resulting light curve, including limb darkening. You can change the orbit, add more planets, show the habitable zone, and compare your setup with real systems such as TRAPPIST-1e and Kepler-186f.</p>
+   <div class="meta"><a class="btn" href="https://jiqbal-astro.github.io/exoplanet-transit-simulator/" target="_blank" rel="noopener">Open the simulator</a></div>
+  </div>
+ </section>
+
+ <section class="row">
+  <h2>Lunar and planetary phase simulator</h2>
+  <div class="row-body">
+   <p>Shows how a moon or planet looks as it moves around its orbit and plots the reflected-light phase curve. Phases can be tied to a real date, inclination and eccentricity are adjustable, and results can be saved as PNG or CSV.</p>
+   <div class="meta"><a class="btn" href="https://jiqbal-astro.github.io/lunar-planetary-phase-simulator/" target="_blank" rel="noopener">Open the simulator</a></div>
+  </div>
+ </section>
+</main>
+<footer>&copy; <span id="year">2026</span> Javed Iqbal · Astronomy &amp; Astrophysics</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>

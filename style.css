@@ -1,0 +1,152 @@
+/* Javed Iqbal — shared site theme (used by every page) */
+:root{
+  --ink:#2b2f33;
+  --muted:#6b7076;
+  --faint:#959ba2;
+  --blue:#8191b2;        /* accent: name, affiliation, icons, active menu item */
+  --link:#55688f;        /* deeper accent for inline links (readable contrast) */
+  --link-hover:#3a4a6b;
+  --nav:#344454;
+  --line:#e6e8ec;
+  --wash:#f4f6f9;
+  --bg:#fff;
+  --serif:"Times New Roman",Tinos,Times,serif;
+  --sans:Lato,"Helvetica Neue",Arial,sans-serif;
+  --side:minmax(250px,.3fr);
+  --body:minmax(0,.7fr);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover);text-decoration:underline;text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:3px}
+img{max-width:100%}
+em{font-style:italic}
+
+/* ---------- Header (sans) ---------- */
+.site-header{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 4px rgba(30,40,60,.08);position:relative;z-index:5;font-family:var(--sans)}
+.nav-wrap{max-width:1400px;margin:0 auto;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:24px;font-weight:700;letter-spacing:.3px;color:var(--ink);white-space:nowrap}
+.brand:hover{color:var(--ink);text-decoration:none}
+.nav{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.nav a{position:relative;font-size:18px;font-weight:700;color:var(--nav);white-space:nowrap;padding:4px 0}
+.nav a:hover{color:var(--blue);text-decoration:none}
+.nav a.active{color:var(--blue)}
+.nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--blue);border-radius:2px}
+
+/* ---------- Page frame ---------- */
+main{max-width:1400px;margin:0 auto;padding:46px 32px 64px}
+.grid{display:grid;grid-template-columns:var(--side) var(--body);gap:56px;align-items:start}
+.grid + .row{margin-top:52px}
+
+/* ---------- Home: profile ---------- */
+.sidebar{text-align:center;padding:6px 12px 0}
+.avatar{display:block;width:250px;height:250px;object-fit:cover;object-position:50% 20%;border-radius:50%;margin:0 auto 24px;box-shadow:0 0 0 6px #fff,0 0 0 7px var(--line)}
+.person-name{font-size:35px;font-weight:400;line-height:1.2;margin:0 0 10px;color:var(--ink)}
+.role{font-size:19px;color:var(--muted);margin:0 0 4px;line-height:1.4}
+.affiliation{font-size:19px;line-height:1.4;margin:0 auto;color:var(--blue);max-width:320px}
+.social{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:32px}
+.social a{color:var(--blue);display:inline-flex;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%}
+.social a:hover{color:var(--link-hover);background:var(--wash)}
+.social svg{width:30px;height:30px;fill:currentColor}
+
+.about h1,.page-head h1{font-size:42px;font-weight:400;line-height:1.15;margin:0 0 16px}
+.about p{font-size:19.5px;line-height:1.68;margin:0 0 16px;max-width:42em}
+.lower-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:40px}
+.lower-grid h2{font-size:23px;margin:0 0 12px;font-weight:700}
+.lower-grid ul{margin:0;padding-left:22px;font-size:18.5px;line-height:1.7}
+.lower-grid li::marker{color:var(--faint)}
+.education-item{display:grid;grid-template-columns:28px 1fr;gap:10px;margin-bottom:14px;font-size:18.5px;line-height:1.4}
+.cap{width:24px;height:24px;fill:var(--ink);margin-top:1px}
+.education-item small{display:block;color:var(--muted);font-size:16px;margin-top:3px}
+
+/* ---------- Sections (home lower part + inner pages) ---------- */
+.row{display:grid;grid-template-columns:var(--side) var(--body);gap:56px;padding:40px 0;border-top:1px solid var(--line)}
+.row > h2{font-size:25px;font-weight:700;line-height:1.25;margin:0;padding-right:12px}
+.row-body > :first-child{margin-top:0}
+.row-body > :last-child{margin-bottom:0}
+.row-body p{font-size:18.5px;line-height:1.68;margin:0 0 14px;max-width:44em}
+.row-body h3{font-size:20px;font-weight:700;margin:32px 0 12px;color:var(--ink)}
+.row-body h3:first-child{margin-top:0}
+
+.page-head{padding:6px 0 34px}
+.page-head p{font-size:19.5px;line-height:1.65;color:var(--muted);margin:0;max-width:42em}
+
+/* entries (research topics, tools, publications) */
+.entry{margin:0 0 26px;max-width:44em}
+.entry:last-child{margin-bottom:0}
+.row-body .entry-title{font-size:19.5px;font-weight:700;line-height:1.4;margin:0 0 5px;color:var(--ink)}
+.entry p{margin:0 0 10px}
+.entry p:last-child{margin-bottom:0}
+.cite{font-size:18.5px;line-height:1.6;margin:0}
+.note{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:9px;font-family:var(--sans);font-size:14.5px;color:var(--muted)}
+.btn{display:inline-block;font-family:var(--sans);font-size:14px;font-weight:700;line-height:1;padding:7px 12px;border:1px solid var(--blue);border-radius:4px;color:var(--link);background:#fff}
+.btn:hover{background:var(--blue);border-color:var(--blue);color:#fff;text-decoration:none}
+
+.plain-list{margin:0;padding-left:22px;max-width:44em}
+.plain-list > li{margin:0 0 24px;padding-left:4px}
+.plain-list > li:last-child{margin-bottom:0}
+.plain-list li::marker{color:var(--faint)}
+
+.book{margin-top:22px;padding-top:22px;border-top:1px dashed var(--line);max-width:44em}
+.book p{margin:0}
+.book .book-title{font-size:20px;font-weight:700;line-height:1.35;margin:0 0 4px}
+.book .book-sub{font-style:italic;color:var(--muted);margin:0 0 10px}
+
+/* contact form */
+.contact-form{max-width:44em;margin:24px 0 28px}
+.field-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin:0 0 18px}
+.field label{display:block;font-family:var(--sans);font-size:14.5px;font-weight:700;color:var(--nav);margin:0 0 6px}
+.field input,.field textarea{width:100%;font-family:var(--serif);font-size:17.5px;color:var(--ink);background:#fff;border:1px solid #cdd2da;border-radius:4px;padding:10px 12px;line-height:1.4}
+.field textarea{resize:vertical;min-height:150px}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(129,145,178,.25)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.btn-send{font-family:var(--sans);font-size:15px;font-weight:700;color:#fff;background:var(--link);border:1px solid var(--link);border-radius:4px;padding:11px 22px;cursor:pointer}
+.btn-send:hover{background:var(--link-hover);border-color:var(--link-hover)}
+.btn-send:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.btn-send:disabled{opacity:.65;cursor:default}
+.row-body .form-status{margin:0;font-size:16.5px;text-align:left}
+.form-status.ok{color:#2f6b45}
+.form-status.err{color:#9b3a32}
+
+/* justified paragraphs on wider screens */
+.about p,.page-head p,.row-body p:not(.cite){text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;color:var(--faint);font-family:var(--sans);font-size:14px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){.grid,.row{gap:40px}}
+@media (max-width:1000px){
+  .nav-wrap{align-items:flex-start;flex-direction:column;gap:12px}
+  .nav{gap:10px 24px}
+  .grid,.row{grid-template-columns:1fr}
+  .row{gap:16px;padding:34px 0}
+  .sidebar{max-width:500px;margin:auto}
+  .lower-grid{gap:30px}
+}
+@media (max-width:650px){
+  .nav-wrap{padding:16px 20px}
+  .brand{font-size:21px}
+  .nav{gap:6px 18px}
+  .nav a{font-size:16px}
+  main{padding:30px 20px 48px}
+  .avatar{width:200px;height:200px}
+  .person-name{font-size:30px}
+  .role,.affiliation{font-size:17.5px}
+  .about h1,.page-head h1{font-size:34px}
+  .about p,.page-head p{font-size:18px}
+  .row-body p,.cite{font-size:17.5px}
+  .row-body .entry-title{font-size:18.5px}
+  .row > h2{font-size:23px}
+  .lower-grid{grid-template-columns:1fr;gap:28px}
+  .lower-grid ul,.education-item{font-size:17.5px}
+  .social{margin-top:24px}
+  .field-pair{grid-template-columns:1fr;gap:0}
+  .about p,.page-head p,.row-body p:not(.cite){text-align:left;-webkit-hyphens:manual;hyphens:manual}
+}

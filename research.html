@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Javed Iqbal</title>
+<meta name="description" content="Research by Javed Iqbal on exoplanet demographics, transit timing variations, stellar flares and habitability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+ <div class="nav-wrap">
+  <a class="brand" href="index.html">JAVED IQBAL</a>
+  <nav class="nav" aria-label="Main navigation">
+   <a href="index.html">Home</a>
+   <a class="active" aria-current="page" href="research.html">Research</a>
+   <a href="full-publications.html">Publications</a>
+   <a href="tools.html">Tools</a>
+   <a href="outreach.html">Outreach</a>
+   <a href="index.html#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+<main>
+ <header class="page-head">
+  <h1>Research</h1>
+  <p>Most of my work is about exoplanets, from finding them in photometric data to asking what the known population says about how planets form and change. I work with small-telescope photometry, archival data from Kepler, K2 and TESS, and a good deal of Python.</p>
+ </header>
+
+ <section class="row">
+  <h2>Exoplanet demographics</h2>
+  <div class="row-body">
+   <p>The radius valley, the shortage of planets between super-Earths and sub-Neptunes, is one of the clearest features in the exoplanet population. Its measured shape depends a lot on method, though. With Shaukat Goderya and A. Sohaib, I compare radius-valley slopes across F, G and K dwarfs and look at how detection-based and measurement-based approaches differ. <span class="note">(Submitted, 2026.)</span></p>
+   <p>A second study, with G. Masood and A. Hasnain, looks at condensation-temperature trends in the chemical abundances of FGK planet hosts. Some earlier work read these trends as a trace of planet formation. Once Galactic chemical evolution is accounted for, we find no evidence for that. <span class="note">(Submitted, 2026.)</span></p>
+  </div>
+ </section>
+
+ <section class="row">
+  <h2>Transit timing variations</h2>
+  <div class="row-body">
+   <p>Since 2024 I have collaborated with ÇOMÜ Ulupınar Observatory in Turkey (PI: Mehmet Yüksek). I am building a Python pipeline that combines MCMC fitting with emcee and N-body simulations, and using it on three short-period planets. New photometry and archival timings together give a long enough baseline to refine their ephemerides and to test for additional, non-transiting companions.</p>
+   <p>Along similar lines, I contributed the transit photometry analysis to a new study of WASP-10b, now in press.</p>
+  </div>
+ </section>
+
+ <section class="row">
+  <h2>Stellar activity and habitability</h2>
+  <div class="row-body">
+   <p>M dwarfs host many of the nearest small planets in their habitable zones, and they flare often. I am measuring flare activity of M dwarfs in the Pleiades from TESS photometry <span class="note">(in preparation)</span>.</p>
+   <p>This picks up a thread from my undergraduate project at BZU, a comparison of habitable zones around M-dwarf systems. It is also how I hope to move toward atmospheric characterisation: working out what stellar radiation does to a planet’s atmosphere, and whether the planet can stay habitable.</p>
+  </div>
+ </section>
+
+ <section class="row">
+  <h2>Exoplanets in open clusters</h2>
+  <div class="row-body">
+   <p>My M.S. thesis at IST, supervised by Shaukat Goderya (Tarleton State University) and Fazeel Mahmood Khan (NYU Abu Dhabi), was a 30.5-hour photometric search for short-period, Jupiter-size planets in NGC&nbsp;884 and NGC&nbsp;869 with a 0.8&nbsp;m telescope. I reduced and analysed more than 200 light curves with ISIS, VaST and my own Python scripts.</p>
+   <p>No hot Jupiters turned up, but the survey found 25 variable stars, four of them new candidates. The work was supported by an IST Master’s Research Grant and published in the <em>Open European Journal on Variable Stars</em> in 2024.</p>
+  </div>
+ </section>
+
+ <section class="row">
+  <h2>Other work</h2>
+  <div class="row-body">
+   <div class="entry">
+    <h3 class="entry-title">Galactic H&nbsp;I 21&nbsp;cm emission</h3>
+    <p>An independent project in 2025 using the 1.5&nbsp;m PICTOR radio telescope. I took drift-scan spectra and wrote the calibration, RFI mitigation and line-fitting code myself. The derived column densities agree with the LAB survey to within about 15%. The results are archived on Zenodo.</p>
+   </div>
+   <div class="entry">
+    <h3 class="entry-title">Space situational awareness pipeline</h3>
+    <p>During a research internship at the Sharjah Space &amp; Astronomy Hub, University of Sharjah (May–July 2026), I built a modular Python pipeline for optical observations of satellites. It handles calibration and quality checks, Gaia DR3 astrometry, timing corrections, object detection, and identification of known objects from TLE/SGP4 orbits.</p>
+   </div>
+   <div class="entry">
+    <h3 class="entry-title">Materials for space habitats</h3>
+    <p>With the Deep Space Initiative (2025–present), I run thermo-mechanical simulations in COMSOL and ANSYS to see how micrometeoroid impacts and thermal cycling affect window materials for space habitats.</p>
+   </div>
+  </div>
+ </section>
+</main>
+<footer>&copy; <span id="year">2026</span> Javed Iqbal · Astronomy &amp; Astrophysics</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
